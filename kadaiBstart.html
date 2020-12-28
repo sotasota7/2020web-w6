@@ -40,7 +40,23 @@
       const div = document.createElement('div');
       div.classList.add('box');
       
-      a = Ramdom(10);
+      /*a = Ramdom(10);
+      div.addEventListener('click', () => {
+       if (i < a/4) {
+          div.textContent = '大吉!';
+          div.classList.add('win');
+        } else if (i < a/2){
+          div.textContent = '中吉!';
+          div.classList.add('win');
+        } else if (i < 3*a/4){
+           div.textContent = '小吉!';
+          div.classList.add('win');
+        } else if (i < a){
+           div.textContent = '凶!';
+          div.classList.add('lose');
+      });*/
+      function random() {
+        var rand = Math.floor( Math.random() * 5) ; //おみくじの目の生成
       div.addEventListener('click', () => {
        if (i < a/4) {
           div.textContent = '大吉!';
@@ -55,6 +71,7 @@
            div.textContent = '凶!';
           div.classList.add('lose');
       });
+      }
       
       
       //div.addEventListener('click', () => {
