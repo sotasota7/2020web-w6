@@ -33,30 +33,25 @@
   <script>
     'use strict';
 
-    const num = 20;
-    const num1 = 5;
-    const num2 = 10;
-    const num3 = 15;
-    const num4 = 20;
+    const num = 10;
+    const num1 = 20;
     const winner = Math.floor(Math.random() * num); // 0 - 4
     const winner1 = Math.floor(Math.random() * num1); // 0 - 4
-    const winner2 = Math.floor(Math.random() * num2); // 0 - 4
-    const winner3 = Math.floor(Math.random() * num3); // 0 - 4
-    const winner4 = Math.floor(Math.random() * num4); // 0 - 4
 
 //    for (let j = 0; j < num; j++) {
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
       div.classList.add('box');
       
+      winner = Math.floor(Math.random() * num1); // 0 - 4
       div.addEventListener('click', () => {
-        if (i === winner1) {
+        if (winner < 5) {
           div.textContent = '大吉!';
           div.classList.add('win');
-        } else if((i === winner2)){
+        } else if((winner >= 5)&&(winner < 10)){
           div.textContent = '中吉!';
           div.classList.add('lose');
-        } else if((i === winner3)){
+        } else if((winner >= 10)&&(winner < 15)){
           div.textContent = '小吉!';
           div.classList.add('lose');
         } else {
