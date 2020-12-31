@@ -48,8 +48,11 @@
       div.classList.add('box');
       
       console.log(Math.random());
+      console.log('クリックされました０！');
       winner = Math.floor(Math.random() * num1); // 0 - 4
+      console.log('クリックされました！');
       console.log(winner);
+      console.log('クリックされました１！');
       div.addEventListener('click', () => {
         if (winner < 5) {
           div.textContent = '大吉!';
@@ -64,7 +67,6 @@
           div.textContent = '凶! ';
           div.classList.add('lose');
         }
-        console.log('クリックされました！');
       });
 
       document.body.appendChild(div);
