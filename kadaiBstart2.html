@@ -54,6 +54,7 @@
       console.log(winner);
       console.log('クリックされました１！');
       div.addEventListener('click', () => {
+        winner = Math.floor(Math.random() * num1); // 0 - 4
         if (winner < 5) {
           div.textContent = '大吉!';
           div.classList.add('win');
