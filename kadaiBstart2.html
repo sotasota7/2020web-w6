@@ -23,6 +23,11 @@
       border-radius: 50%;
       transform: rotate(360deg);
     }
+    .win2 {
+      background: yellow;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
     .lose {
       transform: scale(0.9);
     }
@@ -49,10 +54,10 @@
           div.classList.add('win');
         } else if((rdm >= 5)&&(rdm < 10)){
           div.textContent = '中吉!';
-          div.classList.add('lose');
+          div.classList.add('win2');
         } else if((rdm >= 10)&&(rdm < 15)){
           div.textContent = '小吉!';
-          div.classList.add('lose');
+          div.classList.add('win2');
         } else {
           div.textContent = '凶! ';
           div.classList.add('lose');
