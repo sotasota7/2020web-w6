@@ -35,41 +35,28 @@
 
     const num = 10;
     const num1 = 20;
-//    const winner = Math.floor(Math.random() * num); // 0 - 4
-//    const winner = Math.floor(Math.random() * num1); // 0 - 4
-    var winner; // 0 - 4
-    for(var i=0; i<10; i++) {
-      console.log(Math.random());
-    }
+    var rdm; // 0 - 4
 
 //    for (let j = 0; j < num; j++) {
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
       div.classList.add('box');
       
-      console.log(Math.random());
-      console.log('クリックされました０！');
-      winner = Math.floor(Math.random() * num1); // 0 - 4
-      console.log('クリックされました！');
-      console.log(winner);
-      console.log('クリックされました１！');
       div.addEventListener('click', () => {
-        winner = Math.floor(Math.random() * num1); // 0 - 4
-        if (winner < 5) {
+        rdm = Math.floor(Math.random() * num1); // 0 - 4
+        if (rdm < 5) {
           div.textContent = '大吉!';
           div.classList.add('win');
-        } else if((winner >= 5)&&(winner < 10)){
+        } else if((rdm >= 5)&&(rdm < 10)){
           div.textContent = '中吉!';
           div.classList.add('lose');
-        } else if((winner >= 10)&&(winner < 15)){
+        } else if((rdm >= 10)&&(rdm < 15)){
           div.textContent = '小吉!';
           div.classList.add('lose');
         } else {
           div.textContent = '凶! ';
           div.classList.add('lose');
         }
-        console.log(winner);
-        console.log('クリックされました１！');
       });
 
       document.body.appendChild(div);
